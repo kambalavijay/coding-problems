@@ -6,11 +6,8 @@ public class QuickSort {
 
     public static void main(String[] args) {
 
-        int array[] = {7, 2, 1, 6, 8, 5, 3, 4};
-        // {2, 7, 1, 6, 8, 5, 3, 4}
-        // {2, 7, 1, 6, 8, 5, 3, 4}
-        // {2, 1, 7, 6, 8, 5, 3, 4}
-        // {2, 1, 3, 6, 8, 5, 7, 4}
+        int array[] = {2, 4, 3, 8, 1, 9, 11, 6};
+
         System.out.println("before sort : " + Arrays.toString(array));
         quickSort(array, 0, array.length - 1);
         System.out.println("after sort : " + Arrays.toString(array));

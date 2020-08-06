@@ -11,9 +11,7 @@ public class InsertionSort {
         System.out.println("Before sort : " + Arrays.toString(array));
         insertionSort(array);
         System.out.println("After sort : " + Arrays.toString(array));
-    }
-
-    private static void insertionSort(int[] array) {
+    }private static void insertionSort(int[] array) {
         for (int i = 1; i < array.length; i++) {
 
             int pivot = array[i];
@@ -29,4 +27,6 @@ public class InsertionSort {
             array[j+1] = pivot;
         }
     }
+
+
 }
