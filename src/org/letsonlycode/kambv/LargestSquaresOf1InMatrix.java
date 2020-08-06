@@ -12,7 +12,10 @@ import java.util.Arrays;
            0  0  0  0  0
 
            */
-// Answer would be 3(since the largest sub-matrix of 1's is 3)
+/* Answer would be 3(since the largest sub-matrix of 1's is 3)
+* And we are going to change the matrix in here, but it should not be the case
+* to bypass mutation we need to copy all the array contents and then pass the copied array by reference.
+* */
 public class LargestSquaresOf1InMatrix {
 
     public static void main(String[] args) {
@@ -35,7 +38,7 @@ public class LargestSquaresOf1InMatrix {
         for (int i = 1; i < matrix.length; i++) {
             int[] currRow = matrix[i];
             for (int j = 1; j < currRow.length; j++) {
-                if(matrix[i][j] == 1){
+                if(matrix[i][j] > 0){
                     matrix[i][j] = 1 + Math.min(matrix[i-1][j-1], Math.min(matrix[i][j-1], matrix[i-1][j]));
                 }
                 res = matrix[i][j] > res ? matrix[i][j] : res;
