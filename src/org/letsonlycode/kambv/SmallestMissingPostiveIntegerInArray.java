@@ -1,11 +1,13 @@
 package org.letsonlycode.kambv;
 
-public class SmalletMissingPostiveIntegerInArray {
+public class SmallestMissingPostiveIntegerInArray {
 
-    /*public static void main(String[] args) {
+    /*
+    public static void main(String[] args) {
         int a[] = {-3, 4, 7, -1};
         System.out.println(getMissingInt(a));
-    }*/
+    }
+    */
 
     public static int getMissingInt(int a[]){
 

@@ -1,7 +1,7 @@
 package org.letsonlycode.kambv;// Java program to rotate a matrix by 90 degrees
 import java.io.*;
 
-class GFG {
+public class RotateMatrix1 {
     // An Inplace function to rotate a N x N matrix
     // by 90 degrees in anti-clockwise direction
     static void rotateMatrix(int N, int mat[][])
@@ -76,5 +76,3 @@ class GFG {
         displayMatrix(N, mat);
     }
 }
-
-// This code is contributed by Prakriti Gupta 
