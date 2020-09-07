@@ -12,8 +12,12 @@ public class PracticeTest {
 	public static void main(String[] args) {
 
 
-		String pattern = "a*bc*d";
-		String str = "abbcdd";
+		/*String pattern = "a*bc*d";
+		String str = "abbcdd";*/
+
+		String pattern = "*ab*bc*";
+		String str = "xabbcx";
+
 		int i = 0, j = 0;
 		boolean isMatch = true;
 
@@ -38,7 +42,7 @@ public class PracticeTest {
 					while(j < str.length() && str.charAt(j) == str.charAt(j-1)){
 						j++;
 					}
-					if(str.charAt(j) != pattern.charAt(i)){
+					if(j < str.length() && str.charAt(j) != pattern.charAt(i)){
 						isMatch = false;
 						break;
 					}
@@ -54,7 +58,7 @@ public class PracticeTest {
 			}
 		}
 
-		if(pattern.length() - j > 0)  {
+		if(pattern.length() - i > 0 && pattern.charAt(i) != '*')  {
 			isMatch = false;
 		}
 		System.out.println(isMatch);

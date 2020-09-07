@@ -31,9 +31,10 @@ public class LongestSubStringWithoutDuplicates {
 
             // Update result if we get a larger window
             res = Math.max(res, j - i + 1);
+            System.out.println(str.substring(i, j+1));
 
             // Update the index of j where that character was last seen.
-             lastIndex[str.charAt(j)] = j;
+            lastIndex[str.charAt(j)] = j;
         }
         return res;
     }

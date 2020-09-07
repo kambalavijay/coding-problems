@@ -1,32 +1,39 @@
 package org.letsonlycode.kambv;
 
-import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 public class LongestSubStringWithoutRepeatingChars {
 
 
     public static void main(String[] args) {
-        String str = "ABDEFGABEFTRSA";
+        String str = "ABCDEFGHIJAKLMNOPQRSTUV";
 
         int n = str.length();
-        int i = 0;
+        int i = 0, j = 0;
 
-        int res = 0;
+        int maxLen = Integer.MIN_VALUE;
+        Set s = new HashSet<>();
 
-        int [] prevIndex = new int[256];
-        for (int j = 0; j < prevIndex.length; j++) {
-            prevIndex[j] = -1;
+        while (j < n) {
+            char c = str.charAt(j);
+            if(s.contains(c)){
+                s.clear();
+                s.add(c);
+                i++;
+            }
+            else{
+                s.add(c);
+            }
+            maxLen = Math.max(maxLen, j - i + 1);
+            j++;
         }
-        int j = 0;
-        for (; j < n; j++) {
 
-            i = Math.max(i, prevIndex[str.charAt(j)] + 1);
+        System.out.println("Longest substring " + str.substring(i, j));
+        System.out.println("Length of longest substring " + maxLen);
+    }
 
-            res = Math.max(res, j - i + 1);
-
-            prevIndex[str.charAt(j)] = j;
-        }
-
-
+    void func1(){
+        return;
     }
 }
