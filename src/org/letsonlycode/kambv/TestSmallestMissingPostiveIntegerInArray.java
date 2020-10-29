@@ -1,3 +1,5 @@
+package org.letsonlycode.kambv;
+
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;

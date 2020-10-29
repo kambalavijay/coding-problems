@@ -27,7 +27,6 @@ public class NiceTeams {
         }
 
         return count;
-
     }
 
     public static void main(String[] args) {

@@ -1,21 +1,44 @@
-package org.letsonlycode.kambv
-;
+package org.letsonlycode.kambv;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.*;
 
 public class Snippet {
 	
 	public static void main(String[] args) throws NumberFormatException, IOException {
-		
-		BufferedReader inp = new BufferedReader (new InputStreamReader(System.in));
-        int M = Integer.parseInt(inp.readLine());
-        String[] inputArr = inp.readLine().trim().split(" ");
-        if(M >= 1 && M < (Math.pow(2, 32) - 1)) {
-            System.out.println(((inputArr.length - M) >= 0) ? inputArr[inputArr.length - M] : "NIL");
-        }
-		
-	}
+
+        String S = "ababa";
+        int N = 5;
+        int K = 2;
+
+            Map<String, Integer> map = new HashMap<String, Integer>();
+
+            for(int i = 0; i <= N - K; i++){
+                    if(map.get(S.substring(i, i+K)) == null){
+                            map.put(S.substring(i, i+K), 1);
+                    }
+                    else{
+                            int value  = map.get(S.substring(i, i+K)) + 1;
+                            map.put(S.substring(i, i+K), value);
+                    }
+            }
+
+
+            int size = 0;
+            double total = 0.0;
+
+
+            for(Map.Entry<String, Integer> item : map.entrySet()){
+                    total = total + (item.getValue() * item.getValue());
+                    size  = size + item.getValue();
+            }
+
+
+
+            System.out.println((long)((total/size) % 998244353));
+
+    }
 }
 

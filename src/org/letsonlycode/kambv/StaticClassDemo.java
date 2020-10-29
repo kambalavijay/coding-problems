@@ -1,18 +1,24 @@
 package org.letsonlycode.kambv;
 
+import java.io.Serializable;
 import java.util.Comparator;
 
-class Student implements Comparable<Student>{
-    private String name;
+class Student implements Comparable<Student>, Serializable {
+
+	//	private static final long serialVersionUID = 101;
+
+	private String name;
     private int id;
     private int age;
-    
+    private String email;
+
     public Student() {}
     
     public Student(int id, String name, int age) {
     	this.age = age;
     	this.id = id;
     	this.name = name;
+    	email = "abc@gmail.com";
     }
     
     public String getName() {
@@ -44,7 +50,6 @@ class Student implements Comparable<Student>{
 		return "Student [name=" + name + ", id=" + id + ", age=" + age + "]";
 	}
 
-	
 	public static class IdReverseComparator implements Comparator<Student>{
 
 		@Override
