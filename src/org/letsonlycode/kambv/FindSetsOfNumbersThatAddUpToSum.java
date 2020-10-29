@@ -1,19 +1,18 @@
 package org.letsonlycode.kambv;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class FindSetsOfNumbersThatAddUpToSum {
 
     public static void main(String[] args) {
 
-        int a[] = {2, 4, 6, 10};
+
+        Object s = new TreeSet();
+
+        s = new HashSet<>();
+        /*int a[] = {2, 4, 6, 10};
         int sum = 16;
-
-        List l = new ArrayList();
-
-        System.out.println(countsSets(a, sum, 0));
-        System.out.println(l);
+        System.out.println(countsSets(a, sum, 0));*/
     }
 
     private static int countsSets(int[] a, int sum, int start) {
@@ -25,11 +24,12 @@ public class FindSetsOfNumbersThatAddUpToSum {
         else if(start >= a.length){
             return 0;
         }
-        else if(sum < a[start]) {
+        else if(a[start] > sum) {
             return countsSets(a, sum, start+1);
         }
         else{
-            return countsSets(a, sum - a[start], start+1) + countsSets(a, sum,start+1);
+            return countsSets(a, sum - a[start], start+1) +
+                    countsSets(a, sum,start+1);
         }
     }
 }
