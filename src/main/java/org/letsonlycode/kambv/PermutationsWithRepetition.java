@@ -1,10 +1,6 @@
 package org.letsonlycode.kambv;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Stack;
 
 public class PermutationsWithRepetition {
 		// function to remove all occurrences 
@@ -19,8 +15,8 @@ public class PermutationsWithRepetition {
 	        	 // System.out.println(Arrays.toString(arr));
 	          }
 	         // Create a copy of arr[]  
-	         return Arrays.copyOf(arr, index); 
-	    } 
+	         return Arrays.copyOf(arr, index);
+	    }
 	  
 	    // Driver code 
 	    public static void main(String[] args) {
