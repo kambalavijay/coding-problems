@@ -26,7 +26,7 @@ public class Pramati {
 
     public static void main(String[] args) throws IOException {
 
-        List l = new ArrayList();
+        /*List l = new ArrayList();
         l.add("A");
         l.add("A");
         l.add("C");
@@ -39,5 +39,8 @@ public class Pramati {
 
         String res = whichSweetShouldIBring(l);
         System.out.println(res);
+        */
+        Random r = new Random();
+        System.out.println(r.nextInt(10));
     }
 }
