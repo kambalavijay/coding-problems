@@ -7,9 +7,6 @@ public class MaxConsecutiveOnes1 {
         int A[] = new int[]{1,0,0,0,1,1,0,0,1,1,0,0,0,0,0,0,1,1,1,1,0,1,0,1,1,1,1,1,1,0,1,0,1,0,0,1,1,0,1,1};
         int K = 8;
 
-
-
-        int t = K;
         int max = 0;
         int count = 0;
         int i = 0;
@@ -19,12 +16,12 @@ public class MaxConsecutiveOnes1 {
             if(A[j] == 1){
                 count++;
             }
-            else if(A[j] == 0 && t > 0){
-                t--;
+            else if(A[j] == 0 && K > 0){
+                K--;
                 count++;
             }
             // resetting the window
-            else if(A[j] == 0  && t == 0){
+            else if(A[j] == 0  && K == 0){
                 max = Math.max(count, max);
                 while(i < A.length && A[i++] != 0){
                     count--;
