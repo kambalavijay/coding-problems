@@ -18,13 +18,13 @@ public class Snippet {
         for(int i = 0; i <= N - K; i++){
             if(map.get(S.substring(i, i+K)) == null){
                 map.put(S.substring(i, i+K), 1);
+                map.put(S.substring(i, i+K), 2);
             }
             else{
                 int value  = map.get(S.substring(i, i+K)) + 1;
                 map.put(S.substring(i, i+K), value);
             }
         }
-
 
         int size = 0;
         double total = 0.0;

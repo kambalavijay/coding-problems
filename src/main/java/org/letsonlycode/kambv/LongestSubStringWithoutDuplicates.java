@@ -6,7 +6,7 @@ public class LongestSubStringWithoutDuplicates {
 
     static final int NO_OF_CHARS = 256;
 
-    static int longestUniqueSubsttr(String str)
+    public static int longestUniqueSubsttr(String str)
     {
         int n = str.length();
 
