@@ -7,6 +7,8 @@ public class MaxConsecutiveOnes1 {
         int A[] = new int[]{1,0,0,0,1,1,0,0,1,1,0,0,0,0,0,0,1,1,1,1,0,1,0,1,1,1,1,1,1,0,1,0,1,0,0,1,1,0,1,1};
         int K = 8;
 
+
+
         int t = K;
         int max = 0;
         int count = 0;
