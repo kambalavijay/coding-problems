@@ -1,8 +1,12 @@
 package org.letsonlycode.kambv;
 
+import com.sun.tools.javac.util.List;
+
 public class MaxConsecutiveOnes1 {
 
     public static void main(String[] args) {
+
+        List.of(1,2,3,4,5);
 
         int A[] = new int[]{1,0,0,0,1,1,0,0,1,1,0,0,0,0,0,0,1,1,1,1,0,1,0,1,1,1,1,1,1,0,1,0,1,0,0,1,1,0,1,1};
         int K = 8;

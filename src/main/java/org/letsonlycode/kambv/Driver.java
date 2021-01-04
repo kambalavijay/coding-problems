@@ -2,16 +2,21 @@ package org.letsonlycode.kambv;
 
 import org.json.simple.JSONObject;
 
+import java.util.Deque;
+import java.util.LinkedList;
+
 public class Driver{
 
     public static void main(String[] args) {
 
 
+        Deque deque = new LinkedList();
 
-        JSONObject json = new JSONObject();
-        json.put("car", "Vijay's Car");
-        json.put("car", "Vijay's Car");
+        deque.add(1);
+        deque.add(2);
+        deque.add(3);
+        deque.add(4);
 
-        System.out.println(json);
+        System.out.println(deque.getFirst());
     }
 }

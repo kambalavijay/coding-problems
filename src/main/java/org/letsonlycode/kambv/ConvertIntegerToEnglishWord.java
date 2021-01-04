@@ -45,6 +45,6 @@ public class ConvertIntegerToEnglishWord {
 
     public static void main(String[] args) {
         ConvertIntegerToEnglishWord c = new ConvertIntegerToEnglishWord();
-        System.out.println(c.numberToWords(123));
+        System.out.println(c.numberToWords(12345));
     }
 }
