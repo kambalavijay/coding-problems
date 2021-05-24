@@ -1,4 +1,4 @@
-package CalenderScheduler;
+package com.kambv.calenderccheduler;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -20,8 +20,8 @@ class Outer{
     }
   
     //non static nested class - also called Inner class
-    private class Inner{
-      
+    private static class Inner{
+
         // Both static and non static member of Outer class is accessible in this Inner class
         public void display(){
             System.out.println(" Message from non static nested or Inner class : " + message);
@@ -44,13 +44,13 @@ class Outer{
       
         Outer outer = new Outer(); //outer class instance for creating non static nested class
       
-        Inner inner  = new Outer().new Inner();
+        Inner inner  = new Inner();
       
         //calling non static method of Inner class
         inner.display();
       
         // we can also combine above steps in one step to create instance of Inner class
-        Inner nonStaticInner = new Outer().new Inner();
+        Inner nonStaticInner = new Inner();
       
         // similarly you can now call Inner class method
         nonStaticInner.display();

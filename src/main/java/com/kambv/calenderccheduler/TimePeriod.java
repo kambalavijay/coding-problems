@@ -1,4 +1,4 @@
-package CalenderScheduler;
+package com.kambv.calenderccheduler;
 
 class TimePeriod implements Comparable<TimePeriod>{
 	private int start;
