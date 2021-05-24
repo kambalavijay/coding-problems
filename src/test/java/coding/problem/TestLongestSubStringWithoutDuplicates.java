@@ -1,7 +1,8 @@
-package org.letsonlycode.kambv;
+package coding.problem;
 
 import org.junit.Assert;
 import org.junit.Test;
+import org.letsonlycode.kambv.LongestSubStringWithoutDuplicates;
 
 public class TestLongestSubStringWithoutDuplicates{
 

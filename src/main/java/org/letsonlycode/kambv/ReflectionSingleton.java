@@ -1,6 +1,9 @@
 package org.letsonlycode.kambv;
 
+import com.sun.org.apache.xerces.internal.util.SecurityManager;
+
 import java.lang.reflect.Constructor;
+import java.sql.SQLOutput;
 
 class SingletonDesignPattern {
 
@@ -29,9 +32,22 @@ class SingletonDesignPattern {
 
 public class ReflectionSingleton {
     public static void main(String[] args)  {
+
+        String a = new String("ABC");
+        String b = new String("ABC");
+
+        System.out.println(a == b);
+        System.out.println(a.hashCode());
+
+
+
+
         SingletonDesignPattern objOne = SingletonDesignPattern.getInstance();
-        SingletonDesignPattern objTwo = null;
-        try {
+        SingletonDesignPattern objTwo = SingletonDesignPattern.getInstance();
+        SingletonDesignPattern objThree = SingletonDesignPattern.getInstance();
+        SingletonDesignPattern objFour = SingletonDesignPattern.getInstance();
+
+        /*try {
             Constructor constructor = SingletonDesignPattern.class.getDeclaredConstructor();
             constructor.setAccessible(true);
             objTwo = (SingletonDesignPattern) constructor.newInstance();
@@ -40,8 +56,8 @@ public class ReflectionSingleton {
 
         } catch (Exception ex) {
             System.out.println(ex);
-        }
-        System.out.println("Hashcode of Object 1 - "+objOne.hashCode());
-        System.out.println("Hashcode of Object 2 - "+objTwo.hashCode());
+        }*/
+        //System.out.println("Hashcode of Object 1 - "+objOne.hashCode());
+        //System.out.println("Hashcode of Object 2 - "+objTwo.hashCode());
     }
 }

@@ -1,4 +1,4 @@
-package org.letsonlycode.kambv;
+package coding.problem;
 
 import org.junit.Assert;
 import org.junit.BeforeClass;
