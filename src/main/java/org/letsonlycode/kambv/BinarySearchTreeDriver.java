@@ -63,14 +63,14 @@ class BinarySearchTreeImpl {
     public void insert(Integer data) {
  
         System.out.print("[input: "+data+"]");
-        if(root == null) {
+        if (root == null) {
             this.root = new BstNode(data);
             System.out.println("-> inserted: "+data);
             return;
         }
  
         insertNode(this.root, data);
-        System.out.print("-> inserted: "+data);
+        System.out.print("-> inserted: " +data);
         System.out.println();
     }
  

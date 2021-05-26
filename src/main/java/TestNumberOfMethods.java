@@ -1,6 +1,6 @@
 public class TestNumberOfMethods {
 
-    public void mkjhgkhgkrhgktjhkjhlrtjhrjhorjtoirtyoriyrojorijhoitjhoiutyori(){
+    public void irtyurio() {
         return;
     }
     public void m2(){
@@ -12,9 +12,7 @@ public class TestNumberOfMethods {
     public void m4(){
         return;
     }
-    public void m5(){
-        return;
-    }
+    public void m5() { return; }
     public void m6(){
         return;
     }
@@ -30,6 +28,6 @@ public class TestNumberOfMethods {
     public void m10(){
         return;
     }
-
+    //public void m11(){return;}
 
 }
